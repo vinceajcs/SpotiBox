@@ -13,6 +13,11 @@
 		2CAB2F061FD091400055AAF0 /* SpotiBox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB2F041FD091400055AAF0 /* SpotiBox.xcdatamodeld */; };
 		2CAB2F081FD091400055AAF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CAB2F071FD091400055AAF0 /* Assets.xcassets */; };
 		2CAB2F0B1FD091400055AAF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CAB2F091FD091400055AAF0 /* LaunchScreen.storyboard */; };
+		2CAB2F151FD092690055AAF0 /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CAB2F121FD092690055AAF0 /* SpotifyAudioPlayback.framework */; };
+		2CAB2F161FD092690055AAF0 /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CAB2F131FD092690055AAF0 /* SpotifyMetadata.framework */; };
+		2CAB2F171FD092690055AAF0 /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CAB2F141FD092690055AAF0 /* SpotifyAuthentication.framework */; };
+		2CAB2F1B1FD092B60055AAF0 /* Header.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB2F1A1FD092B60055AAF0 /* Header.m */; };
+		2CAB2F1D1FD093E00055AAF0 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB2F1C1FD093E00055AAF0 /* LoginManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,13 @@
 		2CAB2F071FD091400055AAF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CAB2F0A1FD091400055AAF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CAB2F0C1FD091400055AAF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CAB2F121FD092690055AAF0 /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
+		2CAB2F131FD092690055AAF0 /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyMetadata.framework; sourceTree = "<group>"; };
+		2CAB2F141FD092690055AAF0 /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
+		2CAB2F181FD092B50055AAF0 /* SpotiBox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpotiBox-Bridging-Header.h"; sourceTree = "<group>"; };
+		2CAB2F191FD092B60055AAF0 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		2CAB2F1A1FD092B60055AAF0 /* Header.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Header.m; sourceTree = "<group>"; };
+		2CAB2F1C1FD093E00055AAF0 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CAB2F161FD092690055AAF0 /* SpotifyMetadata.framework in Frameworks */,
+				2CAB2F171FD092690055AAF0 /* SpotifyAuthentication.framework in Frameworks */,
+				2CAB2F151FD092690055AAF0 /* SpotifyAudioPlayback.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +57,9 @@
 			children = (
 				2CAB2EFC1FD091400055AAF0 /* SpotiBox */,
 				2CAB2EFB1FD091400055AAF0 /* Products */,
+				2CAB2F121FD092690055AAF0 /* SpotifyAudioPlayback.framework */,
+				2CAB2F141FD092690055AAF0 /* SpotifyAuthentication.framework */,
+				2CAB2F131FD092690055AAF0 /* SpotifyMetadata.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,13 +74,17 @@
 		2CAB2EFC1FD091400055AAF0 /* SpotiBox */ = {
 			isa = PBXGroup;
 			children = (
+				2CAB2F191FD092B60055AAF0 /* Header.h */,
+				2CAB2F1A1FD092B60055AAF0 /* Header.m */,
 				2CAB2EFD1FD091400055AAF0 /* AppDelegate.swift */,
+				2CAB2F1C1FD093E00055AAF0 /* LoginManager.swift */,
 				2CAB2EFF1FD091400055AAF0 /* ViewController.swift */,
 				2CAB2F011FD091400055AAF0 /* Main.storyboard */,
 				2CAB2F071FD091400055AAF0 /* Assets.xcassets */,
 				2CAB2F091FD091400055AAF0 /* LaunchScreen.storyboard */,
 				2CAB2F0C1FD091400055AAF0 /* Info.plist */,
 				2CAB2F041FD091400055AAF0 /* SpotiBox.xcdatamodeld */,
+				2CAB2F181FD092B50055AAF0 /* SpotiBox-Bridging-Header.h */,
 			);
 			path = SpotiBox;
 			sourceTree = "<group>";
@@ -99,6 +121,7 @@
 				TargetAttributes = {
 					2CAB2EF91FD091400055AAF0 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -139,6 +162,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CAB2F1D1FD093E00055AAF0 /* LoginManager.swift in Sources */,
+				2CAB2F1B1FD092B60055AAF0 /* Header.m in Sources */,
 				2CAB2F061FD091400055AAF0 /* SpotiBox.xcdatamodeld in Sources */,
 				2CAB2F001FD091400055AAF0 /* ViewController.swift in Sources */,
 				2CAB2EFE1FD091400055AAF0 /* AppDelegate.swift in Sources */,
@@ -278,12 +303,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2674F37353;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SpotiBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huang.SpotiBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpotiBox/SpotiBox-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -293,12 +325,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2674F37353;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SpotiBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huang.SpotiBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpotiBox/SpotiBox-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
