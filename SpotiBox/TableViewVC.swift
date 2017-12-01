@@ -36,8 +36,26 @@ extension TableViewVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = song.songArray[indexPath.row].name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell", for: indexPath) as! SongCell
+        
+        cell.cellSongName.text = song.songArray[indexPath.row].name
+        
+        //get image from imageURL
+        guard let url = URL(string: song.songArray[indexPath.row].imageURL) else {
+            return cell
+        }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            cell.cellSongImage.image = UIImage(data: data)
+        } catch {
+            print("ERROR: error thrown trying to get data from URL \(url)")
+        }
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
 }

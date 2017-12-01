@@ -20,6 +20,7 @@
 		2CAB2F1D1FD093E00055AAF0 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB2F1C1FD093E00055AAF0 /* LoginManager.swift */; };
 		2CAB2F1F1FD0B3AF0055AAF0 /* TableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB2F1E1FD0B3AF0055AAF0 /* TableViewVC.swift */; };
 		2CAB2F231FD0E8810055AAF0 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB2F221FD0E8810055AAF0 /* Song.swift */; };
+		2CAB2F251FD0FC520055AAF0 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB2F241FD0FC520055AAF0 /* SongCell.swift */; };
 		DBE89CA94F44D54A4384141D /* Pods_SpotiBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A7A95339F4E004835551C4 /* Pods_SpotiBox.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		2CAB2F1C1FD093E00055AAF0 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		2CAB2F1E1FD0B3AF0055AAF0 /* TableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewVC.swift; sourceTree = "<group>"; };
 		2CAB2F221FD0E8810055AAF0 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		2CAB2F241FD0FC520055AAF0 /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 		49A7A95339F4E004835551C4 /* Pods_SpotiBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpotiBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AC602AC6F8B6706C710C26 /* Pods-SpotiBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotiBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpotiBox/Pods-SpotiBox.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 				2CAB2F1C1FD093E00055AAF0 /* LoginManager.swift */,
 				2CAB2EFF1FD091400055AAF0 /* ViewController.swift */,
 				2CAB2F1E1FD0B3AF0055AAF0 /* TableViewVC.swift */,
+				2CAB2F241FD0FC520055AAF0 /* SongCell.swift */,
 				2CAB2F221FD0E8810055AAF0 /* Song.swift */,
 				2CAB2F071FD091400055AAF0 /* Assets.xcassets */,
 				2CAB2F011FD091400055AAF0 /* Main.storyboard */,
@@ -251,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CAB2F251FD0FC520055AAF0 /* SongCell.swift in Sources */,
 				2CAB2F231FD0E8810055AAF0 /* Song.swift in Sources */,
 				2CAB2F1F1FD0B3AF0055AAF0 /* TableViewVC.swift in Sources */,
 				2CAB2F1D1FD093E00055AAF0 /* LoginManager.swift in Sources */,
