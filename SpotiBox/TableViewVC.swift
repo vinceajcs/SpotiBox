@@ -27,6 +27,15 @@ class TableViewVC: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! MusicVC
+        if let selectedRow = tableView.indexPathForSelectedRow?.row {
+            destination.song = song.songArray[selectedRow].name
+            destination.imageURL = song.songArray[selectedRow].imageURL
+
+        }
+    }
+    
 
 }
 
@@ -40,9 +49,11 @@ extension TableViewVC: UITableViewDelegate, UITableViewDataSource {
         
         cell.cellSongName.text = song.songArray[indexPath.row].name
         
+        cell.cellSongDuration.text = song.songArray[indexPath.row].duration
+        
         //get image from imageURL
         guard let url = URL(string: song.songArray[indexPath.row].imageURL) else {
-            return cell
+            return cell //presumably returns cell without image
         }
         
         do {

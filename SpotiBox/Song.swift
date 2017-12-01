@@ -14,6 +14,7 @@ class Song {
     
     struct SongData {
         var name: String
+        var duration: String
         var imageURL: String
     }
     
@@ -32,8 +33,13 @@ class Song {
                 
                 for index in 0...numberOfSongs-1 {
                     let name = json["tracks"]["items"][index]["name"].stringValue
+                    let durationInMS = json["tracks"]["items"][index]["duration_ms"].doubleValue
+                    
+                    let duration = Int(durationInMS).msToSeconds.minuteSecondMS
+                    
+                    //print("***\(duration)")
                     let imageURL = json["tracks"]["items"][index]["album"]["images"][0]["url"].stringValue
-                    self.songArray.append(SongData(name: name, imageURL: imageURL))
+                    self.songArray.append(SongData(name: name, duration: duration, imageURL: imageURL))
                 }
                 
                 
@@ -44,9 +50,24 @@ class Song {
         }
     }
     
-    
-    
-    
-    
+}
+
+//used to convert song duration from ms to minutes
+extension TimeInterval {
+    var minuteSecondMS: String {
+        return String(format:"%d:%02d", minute, second)
+    }
+    var minute: Int {
+        return Int((self/60).truncatingRemainder(dividingBy: 60))
+    }
+    var second: Int {
+        return Int(truncatingRemainder(dividingBy: 60))
+    }
+}
+
+extension Int {
+    var msToSeconds: Double {
+        return Double(self) / 1000
+    }
 }
 
