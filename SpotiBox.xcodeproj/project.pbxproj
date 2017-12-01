@@ -18,9 +18,13 @@
 		2CAB2F171FD092690055AAF0 /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CAB2F141FD092690055AAF0 /* SpotifyAuthentication.framework */; };
 		2CAB2F1B1FD092B60055AAF0 /* Header.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB2F1A1FD092B60055AAF0 /* Header.m */; };
 		2CAB2F1D1FD093E00055AAF0 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB2F1C1FD093E00055AAF0 /* LoginManager.swift */; };
+		2CAB2F1F1FD0B3AF0055AAF0 /* TableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB2F1E1FD0B3AF0055AAF0 /* TableViewVC.swift */; };
+		2CAB2F231FD0E8810055AAF0 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB2F221FD0E8810055AAF0 /* Song.swift */; };
+		DBE89CA94F44D54A4384141D /* Pods_SpotiBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A7A95339F4E004835551C4 /* Pods_SpotiBox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2035B62203E0B22BF10F7D0C /* Pods-SpotiBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotiBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpotiBox/Pods-SpotiBox.debug.xcconfig"; sourceTree = "<group>"; };
 		2CAB2EFA1FD091400055AAF0 /* SpotiBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotiBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAB2EFD1FD091400055AAF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CAB2EFF1FD091400055AAF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		2CAB2F191FD092B60055AAF0 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		2CAB2F1A1FD092B60055AAF0 /* Header.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Header.m; sourceTree = "<group>"; };
 		2CAB2F1C1FD093E00055AAF0 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		2CAB2F1E1FD0B3AF0055AAF0 /* TableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewVC.swift; sourceTree = "<group>"; };
+		2CAB2F221FD0E8810055AAF0 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		49A7A95339F4E004835551C4 /* Pods_SpotiBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpotiBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50AC602AC6F8B6706C710C26 /* Pods-SpotiBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotiBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpotiBox/Pods-SpotiBox.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +54,7 @@
 				2CAB2F161FD092690055AAF0 /* SpotifyMetadata.framework in Frameworks */,
 				2CAB2F171FD092690055AAF0 /* SpotifyAuthentication.framework in Frameworks */,
 				2CAB2F151FD092690055AAF0 /* SpotifyAudioPlayback.framework in Frameworks */,
+				DBE89CA94F44D54A4384141D /* Pods_SpotiBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +69,8 @@
 				2CAB2F121FD092690055AAF0 /* SpotifyAudioPlayback.framework */,
 				2CAB2F141FD092690055AAF0 /* SpotifyAuthentication.framework */,
 				2CAB2F131FD092690055AAF0 /* SpotifyMetadata.framework */,
+				85AB15A89BEF318701FC649B /* Pods */,
+				F82CADC5A16476806A5128E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,14 +90,33 @@
 				2CAB2EFD1FD091400055AAF0 /* AppDelegate.swift */,
 				2CAB2F1C1FD093E00055AAF0 /* LoginManager.swift */,
 				2CAB2EFF1FD091400055AAF0 /* ViewController.swift */,
-				2CAB2F011FD091400055AAF0 /* Main.storyboard */,
+				2CAB2F1E1FD0B3AF0055AAF0 /* TableViewVC.swift */,
+				2CAB2F221FD0E8810055AAF0 /* Song.swift */,
 				2CAB2F071FD091400055AAF0 /* Assets.xcassets */,
+				2CAB2F011FD091400055AAF0 /* Main.storyboard */,
 				2CAB2F091FD091400055AAF0 /* LaunchScreen.storyboard */,
 				2CAB2F0C1FD091400055AAF0 /* Info.plist */,
 				2CAB2F041FD091400055AAF0 /* SpotiBox.xcdatamodeld */,
 				2CAB2F181FD092B50055AAF0 /* SpotiBox-Bridging-Header.h */,
 			);
 			path = SpotiBox;
+			sourceTree = "<group>";
+		};
+		85AB15A89BEF318701FC649B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2035B62203E0B22BF10F7D0C /* Pods-SpotiBox.debug.xcconfig */,
+				50AC602AC6F8B6706C710C26 /* Pods-SpotiBox.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F82CADC5A16476806A5128E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49A7A95339F4E004835551C4 /* Pods_SpotiBox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,9 +126,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CAB2F0F1FD091400055AAF0 /* Build configuration list for PBXNativeTarget "SpotiBox" */;
 			buildPhases = (
+				0BFD68DC94A5A7A6696E4768 /* [CP] Check Pods Manifest.lock */,
 				2CAB2EF61FD091400055AAF0 /* Sources */,
 				2CAB2EF71FD091400055AAF0 /* Frameworks */,
 				2CAB2EF81FD091400055AAF0 /* Resources */,
+				A3297A730BA6A3F863269592 /* [CP] Embed Pods Frameworks */,
+				505E0722C9C599DB2A770CB6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -157,11 +190,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0BFD68DC94A5A7A6696E4768 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpotiBox-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		505E0722C9C599DB2A770CB6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpotiBox/Pods-SpotiBox-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3297A730BA6A3F863269592 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SpotiBox/Pods-SpotiBox-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpotiBox/Pods-SpotiBox-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2CAB2EF61FD091400055AAF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CAB2F231FD0E8810055AAF0 /* Song.swift in Sources */,
+				2CAB2F1F1FD0B3AF0055AAF0 /* TableViewVC.swift in Sources */,
 				2CAB2F1D1FD093E00055AAF0 /* LoginManager.swift in Sources */,
 				2CAB2F1B1FD092B60055AAF0 /* Header.m in Sources */,
 				2CAB2F061FD091400055AAF0 /* SpotiBox.xcdatamodeld in Sources */,
@@ -301,6 +392,7 @@
 		};
 		2CAB2F101FD091400055AAF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2035B62203E0B22BF10F7D0C /* Pods-SpotiBox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -323,6 +415,7 @@
 		};
 		2CAB2F111FD091400055AAF0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50AC602AC6F8B6706C710C26 /* Pods-SpotiBox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
