@@ -44,6 +44,11 @@ class LoginManager {
         return false
     }
     
+    func preparePlayer() {
+        guard let session = session else { return }
+        MediaPlayer.shared.configurePlayer(authSession: session, id: auth.clientID)
+    }
+    
     
     func login() {
         let safariVC = SFSafariViewController(url: auth.spotifyWebAuthenticationURL())

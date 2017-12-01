@@ -16,15 +16,16 @@ class Song {
         var name: String
         var duration: String
         var imageURL: String
+        var songURL: String
     }
     
     var songArray = [SongData]()
-    var songURL = "https://api.spotify.com/v1/search?q=Shawn+Mendes&type=track"
+    var searchURL = "https://api.spotify.com/v1/search?q=Shawn+Mendes&type=track"
     
     func getSongDetails(completed: @escaping () -> ()) {
         let auth = SPTAuth.defaultInstance()!
         
-        Alamofire.request(songURL, method: .get, parameters: ["q":"Shawn Mendes", "type":"track"], encoding: URLEncoding.default, headers: ["Authorization": "Bearer " + auth.session.accessToken]).responseJSON { response in
+        Alamofire.request(searchURL, method: .get, parameters: ["q":"Shawn Mendes", "type":"track"], encoding: URLEncoding.default, headers: ["Authorization": "Bearer " + auth.session.accessToken]).responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
@@ -33,18 +34,20 @@ class Song {
                 
                 for index in 0...numberOfSongs-1 {
                     let name = json["tracks"]["items"][index]["name"].stringValue
-                    let durationInMS = json["tracks"]["items"][index]["duration_ms"].doubleValue
                     
+                    let durationInMS = json["tracks"]["items"][index]["duration_ms"].doubleValue
                     let duration = Int(durationInMS).msToSeconds.minuteSecondMS
                     
-                    //print("***\(duration)")
                     let imageURL = json["tracks"]["items"][index]["album"]["images"][0]["url"].stringValue
-                    self.songArray.append(SongData(name: name, duration: duration, imageURL: imageURL))
+                    
+                    let songURL = json["tracks"]["items"][index]["uri"].stringValue
+                    
+                    self.songArray.append(SongData(name: name, duration: duration, imageURL: imageURL, songURL: songURL))
                 }
                 
                 
             case .failure(let error):
-                print("ERROR: \(error) failed to get data from url \(self.songURL)")
+                print("ERROR: \(error) failed to get data from url \(self.searchURL)")
             }
             completed()
         }

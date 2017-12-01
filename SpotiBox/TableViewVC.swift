@@ -22,16 +22,19 @@ class TableViewVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        
         song.getSongDetails {
             self.tableView.reloadData()
         }
     }
     
+    //prepares segue from this VC to MusicVC
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as! MusicVC
         if let selectedRow = tableView.indexPathForSelectedRow?.row {
             destination.song = song.songArray[selectedRow].name
             destination.imageURL = song.songArray[selectedRow].imageURL
+            destination.songURL = song.songArray[selectedRow].songURL
 
         }
     }

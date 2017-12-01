@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        //if you have not logged in yet, go to login screen
+        //if user has not logged in yet, go to login screen
         if !LoginManager.shared.isLogged {
             self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
             self.window?.makeKeyAndVisible()
@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             //else go to the navigation controller 
             self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TableViewNC")
+            LoginManager.shared.preparePlayer()
             print("You're logged in!")
         }
         
