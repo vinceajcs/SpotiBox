@@ -14,8 +14,6 @@ class SongCell: UITableViewCell {
     @IBOutlet weak var cellSongName: UILabel!
     @IBOutlet weak var cellSongDuration: UILabel!
     
-    
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }

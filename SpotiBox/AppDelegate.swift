@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if !LoginManager.shared.isLogged {
             self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
             self.window?.makeKeyAndVisible()
+            LoginManager.shared.preparePlayer()
             print("You're not logged in!")
         } else {
             //else go to the navigation controller 

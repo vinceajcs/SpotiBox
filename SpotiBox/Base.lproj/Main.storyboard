@@ -141,6 +141,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pause" translatesAutoresizingMaskIntoConstraints="NO" id="OfS-N4-Ie2">
+                                <rect key="frame" x="147" y="520" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1ro-Du-ZY2" appends="YES" id="GGj-A0-yDq"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -156,10 +164,16 @@
                     </view>
                     <connections>
                         <outlet property="albumCoverImage" destination="05M-94-1Tp" id="5Li-3D-9Ri"/>
+                        <outlet property="playButton" destination="OfS-N4-Ie2" id="XLG-3s-G2b"/>
                         <outlet property="songName" destination="Zju-Ug-VsJ" id="Ybz-aQ-ZuV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clj-va-lsj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1ro-Du-ZY2">
+                    <connections>
+                        <action selector="playButtonTapped:" destination="vDj-bj-6iy" id="HrS-bc-lbL"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2044" y="-111.0944527736132"/>
         </scene>
@@ -182,4 +196,7 @@
             <point key="canvasLocation" x="494" y="-111"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pause" width="512" height="512"/>
+    </resources>
 </document>

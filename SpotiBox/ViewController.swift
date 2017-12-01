@@ -16,13 +16,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     private func configureView() {
         LoginManager.shared.delegate = self
-        //configureLoginButton()
-        //view.backgroundColor = .spotifyBackground
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +40,6 @@ extension ViewController: LoginManagerDelegate {
     func loginManagerDidLoginWithSuccess() {
         UIApplication.shared.keyWindow?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TableViewNC")
         dismiss(animated: true, completion: nil)
-        //print("***I logged in!")
     }
 }
 

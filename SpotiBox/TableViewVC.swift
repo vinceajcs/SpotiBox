@@ -35,6 +35,7 @@ class TableViewVC: UIViewController {
             destination.song = song.songArray[selectedRow].name
             destination.imageURL = song.songArray[selectedRow].imageURL
             destination.songURL = song.songArray[selectedRow].songURL
+            
 
         }
     }
