@@ -20,10 +20,12 @@ class Song {
     }
     
     var songArray = [SongData]()
-    var searchURL = "https://api.spotify.com/v1/search?q=Shawn+Mendes&type=track"
+    var searchURL: String!
     
     func getSongDetails(completed: @escaping () -> ()) {
         let auth = SPTAuth.defaultInstance()!
+        
+        songArray = []
         
         Alamofire.request(searchURL, method: .get, parameters: ["q":"Shawn Mendes", "type":"track"], encoding: URLEncoding.default, headers: ["Authorization": "Bearer " + auth.session.accessToken]).responseJSON { response in
             switch response.result {

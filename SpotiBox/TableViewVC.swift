@@ -14,18 +14,15 @@ class TableViewVC: UIViewController {
     
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var song = Song()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
-        
-        
-        song.getSongDetails {
-            self.tableView.reloadData()
-        }
     }
     
     //prepares segue from this VC to MusicVC
@@ -35,12 +32,31 @@ class TableViewVC: UIViewController {
             destination.song = song.songArray[selectedRow].name
             destination.imageURL = song.songArray[selectedRow].imageURL
             destination.songURL = song.songArray[selectedRow].songURL
-            
-
         }
     }
     
 
+}
+
+extension TableViewVC: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("searchBarPressed!")
+        let search = searchBar.text
+        let keywords = search?.replacingOccurrences(of: " ", with: "+")
+        
+        //everytime the searchBar is "clicked", the searchURL is updated
+        song.searchURL = "https://api.spotify.com/v1/search?q=\(keywords!)&type=track"
+
+        self.view.endEditing(true)
+        
+    }
+    
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        song.getSongDetails {
+            self.tableView.reloadData()
+        }
+        return true
+    }
 }
 
 extension TableViewVC: UITableViewDelegate, UITableViewDataSource {
