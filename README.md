@@ -1,3 +1,3 @@
 # SpotiBox
-Play and pause icons made by RoundIcons from www.flaticon.com 
+Play and pause icons made by RoundIcons from www.flaticon.com </br>
 DJ icon made by Freepik from www.flaticon.com 
