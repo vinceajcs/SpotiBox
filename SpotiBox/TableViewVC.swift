@@ -33,6 +33,7 @@ class TableViewVC: UIViewController {
         let destination = segue.destination as! MusicVC
         if let selectedRow = tableView.indexPathForSelectedRow?.row {
             destination.song = song.songArray[selectedRow].name
+            destination.artist = song.songArray[selectedRow].artist
             destination.imageURL = song.songArray[selectedRow].imageURL
             destination.songURL = song.songArray[selectedRow].songURL
             destination.durationInSeconds = song.songArray[selectedRow].durationInSeconds

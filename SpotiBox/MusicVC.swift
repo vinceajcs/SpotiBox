@@ -20,6 +20,7 @@ class MusicVC: UIViewController {
     @IBOutlet weak var playButton: UIImageView!
     
     var song: String!
+    var artist: String!
     var imageURL: String!
     var songURL: String!
     var durationInSeconds: Double!
@@ -40,6 +41,12 @@ class MusicVC: UIViewController {
         playTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updatePlayButton), userInfo: nil, repeats: true)
         
         sliderTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateSlider), userInfo: nil, repeats: true)
+        
+        navigationItem.title = artist.uppercased()
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        navigationItem.backBarButtonItem?.title = "hey"
+        
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
