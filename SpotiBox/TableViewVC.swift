@@ -38,8 +38,6 @@ class TableViewVC: UIViewController {
             destination.durationInSeconds = song.songArray[selectedRow].durationInSeconds
         }
     }
-    
-
 }
 
 extension TableViewVC: UISearchBarDelegate {
@@ -48,17 +46,17 @@ extension TableViewVC: UISearchBarDelegate {
         let search = searchBar.text
         let keywords = search?.replacingOccurrences(of: " ", with: "+")
         
-        //everytime the searchBar is "clicked", the searchURL is updated
+        //every time the searchBar is "clicked", the searchURL is updated
         song.searchURL = "https://api.spotify.com/v1/search?q=\(keywords!)&type=track"
 
         self.view.endEditing(true)
-        
     }
     
     func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
         song.getSongDetails {
             self.tableView.reloadData()
         }
+
         return true
     }
 }

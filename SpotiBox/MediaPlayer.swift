@@ -47,13 +47,6 @@ class MediaPlayer: NSObject, SPTAudioStreamingPlaybackDelegate, SPTAudioStreamin
         })
     }
     
-//    func seek(progress: Float, songDuration: Double) {
-//       player?.seek(to: Double(progress) * songDuration, callback: { (error) in
-//            if let error = error {
-//                print("Something went wrong trying to seek the track. Here's the error: \(error)")
-//            }
-//       })
-    
     func seek(progress: Float, songDuration: Double) {
         player?.seek(to: Double(progress) * songDuration, callback: { (error) in
                         if let error = error {
@@ -63,9 +56,6 @@ class MediaPlayer: NSObject, SPTAudioStreamingPlaybackDelegate, SPTAudioStreamin
     }
     
 
-    
-
-    
     func configurePlayer(authSession: SPTSession, id: String) {
         if self.player == nil {
             self.player = SPTAudioStreamingController.sharedInstance()
@@ -77,13 +67,12 @@ class MediaPlayer: NSObject, SPTAudioStreamingPlaybackDelegate, SPTAudioStreamin
     }
     
     func audioStreamingDidLogin(_ audioStreaming: SPTAudioStreamingController!) {
-        print("Signed into audioStreaming!")
+        print("Signed into AudioStreaming!")
     }
     
     func audioStreaming(_ audioStreaming: SPTAudioStreamingController!, didReceiveError error: Error!) {
-        print("Wasn't able to sign into audioStreaming: \(error)")
+        print("Wasn't able to sign into AudioStreaming: \(error)")
     }
     
-   
     
 }

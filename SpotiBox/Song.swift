@@ -23,20 +23,24 @@ class Song {
     var songArray = [SongData]()
     var searchURL: String!
     
+    var validURL = true
+    
     func getSongDetails(completed: @escaping () -> ()) {
         let auth = SPTAuth.defaultInstance()!
         
         //empty array after each search request
         songArray = []
         
-        Alamofire.request(searchURL, method: .get, parameters: ["q":"Shawn Mendes", "type":"track"], encoding: URLEncoding.default, headers: ["Authorization": "Bearer " + auth.session.accessToken]).responseJSON { response in
+        Alamofire.request(searchURL, method: .get, parameters: ["q":"", "type":"track"], encoding: URLEncoding.default, headers: ["Authorization": "Bearer " + auth.session.accessToken]).responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
                 let JSONSongsArray = json["tracks"]["items"]
                 let numberOfSongs = JSONSongsArray.count
                 
+                //if query is invalid let user know and tell them to try again
                 if numberOfSongs == 0 {
+                    self.showAlert()
                     print("Please try another search query.")
                     return
                 }
@@ -63,6 +67,13 @@ class Song {
         }
     }
     
+    func showAlert() {
+        let alertController = UIAlertController(title: "No search results found", message: "Please try another search keyword.", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(alertAction)
+        UIApplication.topViewController()?.present(alertController, animated: true, completion: nil)
+    }
+    
 }
 
 //used to convert song duration from ms to minutes
@@ -81,6 +92,22 @@ extension TimeInterval {
 extension Int {
     var msToSeconds: Double {
         return Double(self) / 1000
+    }
+}
+
+extension UIApplication {
+    static func topViewController(base: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController) -> UIViewController? {
+        if let nav = base as? UINavigationController {
+            return topViewController(base: nav.visibleViewController)
+        }
+        if let tab = base as? UITabBarController, let selected = tab.selectedViewController {
+            return topViewController(base: selected)
+        }
+        if let presented = base?.presentedViewController {
+            return topViewController(base: presented)
+        }
+        
+        return base
     }
 }
 

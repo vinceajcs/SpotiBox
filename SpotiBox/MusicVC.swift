@@ -40,7 +40,12 @@ class MusicVC: UIViewController {
         playTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updatePlayButton), userInfo: nil, repeats: true)
         
         sliderTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateSlider), userInfo: nil, repeats: true)
-        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        //stop both timers if we go back to the list of songs
+        playTimer.invalidate()
+        sliderTimer.invalidate()
     }
     
 
