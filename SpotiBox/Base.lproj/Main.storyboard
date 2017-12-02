@@ -12,6 +12,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="Avenir.ttc">
+            <string>Avenir-BlackOblique</string>
             <string>Avenir-Heavy</string>
         </array>
         <array key="Futura.ttc">
@@ -24,6 +25,95 @@
         </array>
     </customFonts>
     <scenes>
+        <!--AboutVC-->
+        <scene sceneID="JLD-Rx-iPB">
+            <objects>
+                <viewController id="e1d-AA-u1A" customClass="AboutVC" customModule="SpotiBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hml-My-55l">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sod-Jy-0Cx">
+                                <rect key="frame" x="16" y="518" width="67" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3yA-k9-K7l"/>
+                                    <constraint firstAttribute="width" constant="67" id="SvB-Pl-M9z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="DONE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="e1d-AA-u1A" eventType="touchUpInside" id="ddH-bO-6HU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPOTIBOX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oU-NF-MgB">
+                                <rect key="frame" x="39" y="33" width="254" height="52"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
+                                <color key="textColor" red="0.86819845439999999" green="0.15051320200000001" blue="0.44841873650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jukebox, boombox, SPOTIBOX" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WB-cM-AwJ">
+                                <rect key="frame" x="27" y="122.5" width="266" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
+                                <color key="textColor" red="0.86819845439999999" green="0.15051320200000001" blue="0.44841873650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a music player that uses Spotify's Web API" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgL-lc-im2">
+                                <rect key="frame" x="39" y="93" width="254" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-BlackOblique" family="Avenir" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="made by Vincent" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVE-0z-zqv">
+                                <rect key="frame" x="16" y="360" width="286" height="24"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" translatesAutoresizingMaskIntoConstraints="NO" id="hMt-nq-LiU">
+                                <rect key="frame" x="39" y="172" width="254" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hMt-nq-LiU" secondAttribute="height" multiplier="127:90" id="bVU-Yr-4zx"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotify" translatesAutoresizingMaskIntoConstraints="NO" id="hbV-MF-mdX">
+                                <rect key="frame" x="224" y="476" width="69" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="33Y-CF-n79"/>
+                                    <constraint firstAttribute="height" constant="72" id="Uc2-oB-D6A"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.53549861907958984" green="0.68680715560913086" blue="0.87800300121307373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qP5-Bz-GaY" firstAttribute="trailing" secondItem="hMt-nq-LiU" secondAttribute="trailing" constant="27" id="1fM-4x-95E"/>
+                            <constraint firstItem="qP5-Bz-GaY" firstAttribute="trailing" secondItem="PVE-0z-zqv" secondAttribute="trailing" constant="18" id="1nV-bm-d2A"/>
+                            <constraint firstItem="zgL-lc-im2" firstAttribute="top" secondItem="8oU-NF-MgB" secondAttribute="bottom" constant="8" id="4Bw-I6-LT4"/>
+                            <constraint firstItem="zgL-lc-im2" firstAttribute="leading" secondItem="qP5-Bz-GaY" secondAttribute="leading" constant="39" id="6l6-bb-TCm"/>
+                            <constraint firstItem="hMt-nq-LiU" firstAttribute="leading" secondItem="qP5-Bz-GaY" secondAttribute="leading" constant="39" id="BS9-ma-NQD"/>
+                            <constraint firstItem="qP5-Bz-GaY" firstAttribute="trailing" secondItem="8oU-NF-MgB" secondAttribute="trailing" constant="27" id="EJO-Kz-sGA"/>
+                            <constraint firstItem="8oU-NF-MgB" firstAttribute="top" secondItem="qP5-Bz-GaY" secondAttribute="top" constant="13" id="JdX-Gk-Lnc"/>
+                            <constraint firstItem="qP5-Bz-GaY" firstAttribute="trailing" secondItem="6WB-cM-AwJ" secondAttribute="trailing" constant="27" id="Kg2-Wm-47e"/>
+                            <constraint firstItem="8oU-NF-MgB" firstAttribute="leading" secondItem="qP5-Bz-GaY" secondAttribute="leading" constant="39" id="NdT-xF-ooW"/>
+                            <constraint firstItem="Sod-Jy-0Cx" firstAttribute="leading" secondItem="PVE-0z-zqv" secondAttribute="leading" id="Qft-wq-t3S"/>
+                            <constraint firstItem="6WB-cM-AwJ" firstAttribute="top" secondItem="zgL-lc-im2" secondAttribute="bottom" constant="9" id="RKo-Kf-BuC"/>
+                            <constraint firstItem="PVE-0z-zqv" firstAttribute="top" secondItem="hMt-nq-LiU" secondAttribute="bottom" constant="8" id="XBY-xs-KVC"/>
+                            <constraint firstItem="hMt-nq-LiU" firstAttribute="top" secondItem="6WB-cM-AwJ" secondAttribute="bottom" constant="26" id="Zzz-I8-xjs"/>
+                            <constraint firstItem="6WB-cM-AwJ" firstAttribute="leading" secondItem="qP5-Bz-GaY" secondAttribute="leading" constant="27" id="bNq-R2-gaz"/>
+                            <constraint firstItem="qP5-Bz-GaY" firstAttribute="trailing" secondItem="zgL-lc-im2" secondAttribute="trailing" constant="27" id="eOf-js-5Ip"/>
+                            <constraint firstItem="hbV-MF-mdX" firstAttribute="bottom" secondItem="Sod-Jy-0Cx" secondAttribute="bottom" id="fRg-1U-xhK"/>
+                            <constraint firstAttribute="bottom" secondItem="hbV-MF-mdX" secondAttribute="bottom" constant="20" symbolic="YES" id="kus-2U-NaC"/>
+                            <constraint firstItem="PVE-0z-zqv" firstAttribute="leading" secondItem="qP5-Bz-GaY" secondAttribute="leading" constant="16" id="w5f-EF-dJH"/>
+                            <constraint firstItem="hbV-MF-mdX" firstAttribute="trailing" secondItem="hMt-nq-LiU" secondAttribute="trailing" id="wiP-fU-iQK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qP5-Bz-GaY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPN-84-kDP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="662"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -58,16 +148,27 @@
                                 <color key="textColor" red="0.8681984543800354" green="0.15051320195198059" blue="0.44841873645782471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RG1-Iz-CbU">
+                                <rect key="frame" x="128" y="500" width="64" height="35"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="About"/>
+                                <connections>
+                                    <action selector="aboutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JcM-Rb-Dyh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="AHH-4x-0QJ" firstAttribute="top" secondItem="ksG-Px-Jvx" secondAttribute="bottom" constant="8" id="0BO-yd-Sfn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l7s-sr-ERc" secondAttribute="trailing" constant="33" id="7pF-aL-XKZ"/>
                             <constraint firstItem="l7s-sr-ERc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="8ch-kc-azM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RG1-Iz-CbU" secondAttribute="bottom" constant="33" id="8yN-G3-5oD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AHH-4x-0QJ" secondAttribute="trailing" constant="33" id="AhN-Ot-HKE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ksG-Px-Jvx" secondAttribute="trailing" constant="33" id="KhR-L6-dhZ"/>
                             <constraint firstItem="AHH-4x-0QJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="WJx-0U-UFP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RG1-Iz-CbU" secondAttribute="trailing" constant="128" id="hlF-qJ-e1h"/>
                             <constraint firstItem="ksG-Px-Jvx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="s1s-8I-9QN"/>
+                            <constraint firstItem="RG1-Iz-CbU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="128" id="uYJ-Yr-gWe"/>
                             <constraint firstItem="l7s-sr-ERc" firstAttribute="top" secondItem="AHH-4x-0QJ" secondAttribute="bottom" constant="42" id="wa1-mR-2NM"/>
                             <constraint firstItem="ksG-Px-Jvx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="yF1-gW-Wba"/>
                         </constraints>
@@ -75,11 +176,12 @@
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="l7s-sr-ERc" id="AYc-hZ-Aej"/>
+                        <segue destination="e1d-AA-u1A" kind="presentation" identifier="ToAboutVC" id="XTX-O9-DPO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-277.5" y="-113.02816901408451"/>
+            <point key="canvasLocation" x="-279.375" y="-114.08450704225352"/>
         </scene>
         <!--SPOTIBOX-->
         <scene sceneID="gn7-s2-n9V">
@@ -155,7 +257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1XN-Bz-T1o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1224.8" y="-111.0944527736132"/>
+            <point key="canvasLocation" x="1283" y="-113"/>
         </scene>
         <!--MusicVC-->
         <scene sceneID="mID-7r-o6x">
@@ -166,25 +268,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="05M-94-1Tp">
-                                <rect key="frame" x="42" y="106" width="241" height="216"/>
+                                <rect key="frame" x="42" y="106" width="241" height="216.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="05M-94-1Tp" secondAttribute="height" multiplier="241:216" id="aib-e5-Wg1"/>
                                 </constraints>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lxl-ME-F9R">
-                                <rect key="frame" x="39" y="381" width="246" height="31"/>
+                                <rect key="frame" x="39" y="381.5" width="246" height="31"/>
                                 <connections>
                                     <action selector="sliderDragged:" destination="vDj-bj-6iy" eventType="valueChanged" id="X53-YX-vLX"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zju-Ug-VsJ">
-                                <rect key="frame" x="42" y="330" width="241" height="27.5"/>
+                                <rect key="frame" x="42" y="330.5" width="241" height="27"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pause" translatesAutoresizingMaskIntoConstraints="NO" id="OfS-N4-Ie2">
-                                <rect key="frame" x="132" y="428" width="60" height="60"/>
+                                <rect key="frame" x="132" y="428.5" width="60" height="60"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OfS-N4-Ie2" secondAttribute="height" multiplier="1:1" id="sAi-iy-5j2"/>
@@ -252,6 +354,8 @@
     </scenes>
     <resources>
         <image name="dj" width="512" height="512"/>
+        <image name="me" width="2048" height="1370"/>
         <image name="pause" width="512" height="512"/>
+        <image name="spotify" width="512" height="512"/>
     </resources>
 </document>

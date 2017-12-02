@@ -32,6 +32,10 @@ class ViewController: UIViewController {
         LoginManager.shared.login()
     }
     
+    @IBAction func aboutButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "ToAboutVC", sender: nil)
+    }
+    
 
 
 }
