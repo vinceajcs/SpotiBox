@@ -20,6 +20,9 @@ class TableViewVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //log into audio streaming
+        LoginManager.shared.preparePlayer()
+        
         searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
@@ -32,6 +35,7 @@ class TableViewVC: UIViewController {
             destination.song = song.songArray[selectedRow].name
             destination.imageURL = song.songArray[selectedRow].imageURL
             destination.songURL = song.songArray[selectedRow].songURL
+            destination.durationInSeconds = song.songArray[selectedRow].durationInSeconds
         }
     }
     

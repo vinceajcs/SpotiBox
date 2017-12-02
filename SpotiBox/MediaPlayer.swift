@@ -47,6 +47,25 @@ class MediaPlayer: NSObject, SPTAudioStreamingPlaybackDelegate, SPTAudioStreamin
         })
     }
     
+//    func seek(progress: Float, songDuration: Double) {
+//       player?.seek(to: Double(progress) * songDuration, callback: { (error) in
+//            if let error = error {
+//                print("Something went wrong trying to seek the track. Here's the error: \(error)")
+//            }
+//       })
+    
+    func seek(progress: Float, songDuration: Double) {
+        player?.seek(to: Double(progress) * songDuration, callback: { (error) in
+                        if let error = error {
+                            print("Something went wrong trying to seek the track. Here's the error: \(error)")
+                        }
+                   })
+    }
+    
+
+    
+
+    
     func configurePlayer(authSession: SPTSession, id: String) {
         if self.player == nil {
             self.player = SPTAudioStreamingController.sharedInstance()

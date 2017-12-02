@@ -155,6 +155,13 @@
                                     <outletCollection property="gestureRecognizers" destination="1ro-Du-ZY2" appends="YES" id="GGj-A0-yDq"/>
                                 </connections>
                             </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lxl-ME-F9R">
+                                <rect key="frame" x="65" y="441" width="244" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderDragged:" destination="vDj-bj-6iy" eventType="valueChanged" id="X53-YX-vLX"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -171,6 +178,7 @@
                     <connections>
                         <outlet property="albumCoverImage" destination="05M-94-1Tp" id="5Li-3D-9Ri"/>
                         <outlet property="playButton" destination="OfS-N4-Ie2" id="XLG-3s-G2b"/>
+                        <outlet property="slider" destination="lxl-ME-F9R" id="MJd-fv-zGQ"/>
                         <outlet property="songName" destination="Zju-Ug-VsJ" id="Ybz-aQ-ZuV"/>
                     </connections>
                 </viewController>
