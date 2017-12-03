@@ -26,6 +26,8 @@ class TableViewVC: UIViewController {
         searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.keyboardDismissMode = .onDrag
+        
     }
     
     //prepares segue from this VC to MusicVC
@@ -49,8 +51,9 @@ extension TableViewVC: UISearchBarDelegate {
         
         //every time the searchBar is "clicked", the searchURL is updated
         song.searchURL = "https://api.spotify.com/v1/search?q=\(keywords!)&type=track"
-
+        
         self.view.endEditing(true)
+        
     }
     
     func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
@@ -60,6 +63,7 @@ extension TableViewVC: UISearchBarDelegate {
 
         return true
     }
+    
 }
 
 extension TableViewVC: UITableViewDelegate, UITableViewDataSource {
@@ -92,4 +96,5 @@ extension TableViewVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
+    
 }
