@@ -1,5 +1,5 @@
 # SpotiBox
-Named inspired by a jukebox. Developed in XCode and primarily implemented in Swift. Uses Spotify's iOS SDK for login authentication and its Web API to search and play music. Final project for my Intro to Swift/iO course.
+Named inspired by a jukebox. Developed in XCode and primarily implemented in Swift. Uses Spotify's iOS SDK for login authentication and its Web API to search and play music. Final project for my Intro to Swift/iOS course.
 
 ### Built With 
 * [Xcode](https://developer.apple.com/xcode/) - IDE for MacOS
