@@ -9,11 +9,11 @@ Named inspired by a jukebox. Developed in XCode and primarily implemented in Swi
 * [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) - Used to parse the JSON data 
 
 ### Acknowledgements and Resources
-[Tutoral on integrating iOS Spotify SDK for Swift 3.0+](https://medium.com/@elonrubin/ios-spotify-sdk-swift-3-0-tutorial-b629af4b889d)
-[Spotify Demo](https://github.com/wfratczak/Spotify-Demo)
-[Spotify Search](https://www.youtube.com/watch?v=FjsxG07haJI)
-[Swift for iOS Development](http://scholar.flatworldknowledge.com/books/30954/programming-30491-20170501-133403-053358/read)
-Play and pause icons made by RoundIcons from [flaticon](https://www.flaticon.com/)
-DJ icon made by Freepik from [flaticon](https://www.flaticon.com/)
+* [Tutoral on integrating iOS Spotify SDK for Swift 3.0+](https://medium.com/@elonrubin/ios-spotify-sdk-swift-3-0-tutorial-b629af4b889d)
+* [Spotify Demo](https://github.com/wfratczak/Spotify-Demo)
+* [Spotify Search](https://www.youtube.com/watch?v=FjsxG07haJI)
+* [Swift for iOS Development](http://scholar.flatworldknowledge.com/books/30954/programming-30491-20170501-133403-053358/read)
+* Play and pause icons made by RoundIcons from [flaticon](https://www.flaticon.com/)
+* DJ icon made by Freepik from [flaticon](https://www.flaticon.com/)
 
 
