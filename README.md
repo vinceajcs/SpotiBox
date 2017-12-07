@@ -1,5 +1,5 @@
 # SpotiBox
-Jukebox, Boombox, SpotiBox. Developed in XCode and primarily implemented in Swift. Uses Spotify's iOS SDK for login authentication and its Web API to search and play music. Final project for my Intro to Swift/iOS course.
+Jukebox, Boombox, SpotiBox. Developed in XCode and primarily implemented in Swift. Uses Spotify's iOS SDK for login authentication and its Web API to search and play music. Final project for my Intro to Swift/iOS course. **Note: To use all features in this app, you need a Spotify Premium account. Otherwise you will be unable to play music.**
 
 ### Built With 
 * [Xcode](https://developer.apple.com/xcode/) - IDE for MacOS
